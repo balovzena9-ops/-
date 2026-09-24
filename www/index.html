@@ -16,7 +16,8 @@
   .hidden{display:none!important}
   #menu{position:fixed;inset:0;pointer-events:auto;
     background:linear-gradient(90deg,rgba(0,0,0,.98) 0%,rgba(8,0,0,.95) 35%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.15) 100%)}
-  #titleWrap{position:absolute;left:3%;top:1%;width:20%;max-width:260px}
+  /* ==== ИЗМЕНЕНО: название игры чуть-чуть выше ==== */
+  #titleWrap{position:absolute;left:3%;top:-1%;width:21%;max-width:280px}
   #titleWrap canvas{width:100%;height:auto;filter:drop-shadow(0 0 30px rgba(140,0,0,.75))}
   #menuBtns{position:absolute;left:5%;bottom:20%;display:flex;flex-direction:column;gap:9px}
   #menuBtns button{background:#0e0405;color:#d8b8b8;border:1px solid #5a0d0d;
@@ -89,14 +90,15 @@
   #creditsText{white-space:pre-line;text-align:center;line-height:2;color:#e8d8d8;font-size:14px}
   #hud{position:fixed;inset:0;pointer-events:none}
   #clock{display:none!important}
+  /* ==== ИЗМЕНЕНО: пауза чуть меньше ==== */
   #pauseBtn{
-    position:absolute;top:20px;right:24px;
-    width:64px;height:52px;
+    position:absolute;top:18px;right:22px;
+    width:56px;height:46px;
     background:linear-gradient(180deg,rgba(20,4,6,.85),rgba(8,2,3,.9));
     border:2px solid #5a0d0d;
     color:#eee;
     font-family:Impact,'Arial Black',sans-serif;
-    font-size:18px;letter-spacing:2px;
+    font-size:16px;letter-spacing:2px;
     border-radius:4px;
     cursor:pointer;pointer-events:auto;
     display:flex;align-items:center;justify-content:center;
@@ -105,17 +107,18 @@
   }
   #pauseBtn:hover{background:linear-gradient(180deg,rgba(50,8,10,.95),rgba(20,4,6,.95));
     border-color:#c8181c;color:#fff;box-shadow:0 0 26px rgba(200,20,20,.7), inset 0 0 14px rgba(200,20,20,.4);transform:scale(1.05)}
+  /* ==== ИЗМЕНЕНО: плашка НОЧЬ X чуть меньше и под паузой ==== */
   #nightLabel{
-    position:absolute;top:84px;right:24px;
-    font-size:20px;color:#eee;
+    position:absolute;top:72px;right:22px;
+    font-size:17px;color:#eee;
     text-shadow:0 0 14px #000, 0 0 4px #000;
-    letter-spacing:4px;
+    letter-spacing:3px;
     background:linear-gradient(180deg,rgba(20,4,6,.85),rgba(8,2,3,.9));
     border:2px solid #5a0d0d;
-    padding:14px 22px;
+    padding:11px 18px;
     font-family:Impact,'Arial Black',sans-serif;
     border-radius:4px;
-    min-width:120px;
+    min-width:105px;
     text-align:center;
     box-shadow:0 0 20px rgba(140,0,0,.5), inset 0 0 12px rgba(140,0,0,.3);
   }
@@ -286,10 +289,11 @@
 
   #mobileBtns{position:absolute;right:28px;bottom:28px;display:flex;
     flex-direction:column;gap:22px;pointer-events:none}
-  .mbtn{width:92px;height:92px;border-radius:50%;
+  /* ==== ИЗМЕНЕНО: кнопки E/C чуть меньше ==== */
+  .mbtn{width:82px;height:82px;border-radius:50%;
     background:radial-gradient(circle at 35% 35%,rgba(60,15,20,.9),rgba(20,5,8,.9));
     border:2px solid rgba(200,40,40,0.6);color:#f0d8d8;
-    font-family:'Courier New',monospace;font-size:34px;font-weight:bold;
+    font-family:'Courier New',monospace;font-size:30px;font-weight:bold;
     pointer-events:auto;touch-action:none;user-select:none;-webkit-user-select:none;
     -webkit-tap-highlight-color:transparent;cursor:pointer;
     display:flex;align-items:center;justify-content:center;
@@ -452,7 +456,7 @@
   #sitHint b{color:#fff}
 
   #nightSplash{position:fixed;inset:0;background:#000;z-index:190;
-    display:none;flex-direction:column;align-items:center;justify-content:center;gap:32px;
+    display:none;flex-direction:column;align-items:center;justify-content:center;gap:26px;
     pointer-events:none;opacity:0;transition:opacity 0.5s}
   #nightSplash.on{display:flex;opacity:1}
   #nightSplash .nsNight{font-family:Impact,'Arial Black',sans-serif;
@@ -462,6 +466,8 @@
   #nightSplash .nsTime{font-family:'Courier New',monospace;
     font-size:56px;letter-spacing:10px;color:#eee;text-shadow:0 0 22px #000}
   #nightSplash .nsSub{font-size:14px;letter-spacing:8px;color:#555;margin-top:8px}
+  /* ==== ДОБАВЛЕНО: текст про песни в nightSplash ==== */
+  #nightSplash .nsMusic{font-size:12px;letter-spacing:4px;color:#a55050;margin-top:2px;text-align:center}
   @keyframes nsPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.9;transform:scale(1.02)}}
 
   #suffocationOverlay{
@@ -900,6 +906,8 @@
       <h2>ОБ ИГРЕ</h2>
       <div id="creditsText">Игра создана игровой студии MYRUNPLAY&gt;_ продолжение 1 главы, при поддержке MYRY и VIKO.
 
+Все песни можно слушать и снимать спокойно!
+
 Игра создана с помощью ИИ</div>
       <button id="creditsClose">ЗАКРЫТЬ</button>
     </div>
@@ -1054,6 +1062,7 @@
     <div class="nsNight">НОЧЬ 1</div>
     <div class="nsTime">00:00</div>
     <div class="nsSub">ЗАСТУПАЙ НА СМЕНУ</div>
+    <div class="nsMusic">Все песни можно слушать и снимать спокойно!</div>
   </div>
 
   <div id="mobileControls">
@@ -1118,14 +1127,15 @@ function startPowerOutMusic(){ return; }
 function stopPowerOutMusic(){ return; }
 
 /* ============================================================
-   ==== АУДИО ПАТЧ ДЛЯ MP3 ====================================
-   Заменяем пустые заглушки на реальное воспроизведение mp3.
-   Игра ничего не подозревает — функции называются так же.
+   ==== АУДИО ПАТЧ ДЛЯ MP3 (с фиксами) ========================
+   - Фон меню / ночей 1-4 / ночи 5 / скример
+   - Стоп музыки при заходе в ЭКСТРА, возврат при выходе
+   - Стоп музыки после окончания ночи, возврат меню
+   - Скример в ЭКСТРА тоже играет
    ============================================================ */
 (function(){
   'use strict';
 
-  // --- Регистрация mp3 файлов ---
   const MP3 = {
     menu:        'menu.mp3',
     nights_1_4:  'nights_1_4.mp3',
@@ -1133,10 +1143,7 @@ function stopPowerOutMusic(){ return; }
     jumpscare:   'jumpscare.mp3'
   };
 
-  // --- Кэш Audio-объектов, чтобы не создавать заново ---
   const audioCache = {};
-
-  // --- Разблокировка автоплея (Android WebView блокирует до первого жеста) ---
   let unlocked = false;
   const pendingPlays = [];
 
@@ -1145,7 +1152,6 @@ function stopPowerOutMusic(){ return; }
     const p = audio.play();
     if (p && typeof p.catch === 'function'){
       p.catch(err => {
-        // Автоплей заблокирован — отложим до первого тапа/клика
         if (err && err.name === 'NotAllowedError'){
           pendingPlays.push(audio);
         }
@@ -1156,16 +1162,13 @@ function stopPowerOutMusic(){ return; }
   function unlockAudio(){
     if (unlocked) return;
     unlocked = true;
-    // Разблокируем WebAudio (для beep-звуков)
     if (audioCtx && audioCtx.state === 'suspended'){
       audioCtx.resume().catch(()=>{});
     }
-    // Разблокируем все отложенные mp3
     while (pendingPlays.length){
       const a = pendingPlays.shift();
       try { a.play().catch(()=>{}); } catch(e){}
     }
-    // Переигрываем текущую фоновую музыку (если есть)
     if (currentMusicKey && audioCache[currentMusicKey]){
       const a = audioCache[currentMusicKey];
       if (a.paused){
@@ -1174,13 +1177,13 @@ function stopPowerOutMusic(){ return; }
     }
   }
 
-  // Ловим первый жест пользователя — любой тап/клик/касание
   ['pointerdown','touchstart','mousedown','keydown','click'].forEach(evt => {
     document.addEventListener(evt, unlockAudio, { passive: true, once: false });
   });
 
-  // --- Внутренние функции патча ---
   let currentMusicKey = null;
+  // Когда мы в ЭКСТРА или в паузе — музыка должна быть остановлена
+  let musicSuppressed = false;
 
   function getAudio(key){
     if (audioCache[key]) return audioCache[key];
@@ -1194,10 +1197,13 @@ function stopPowerOutMusic(){ return; }
   }
 
   function playMusic(key){
+    if (musicSuppressed) {
+      // если музыка подавлена — только запоминаем, что хотели играть, но не включаем
+      currentMusicKey = key;
+      return;
+    }
     const a = getAudio(key);
-    // Если уже играет именно эта музыка — не перезапускаем
     if (currentMusicKey === key && !a.paused) return;
-    // Останавливаем предыдущую фоновую
     if (currentMusicKey && audioCache[currentMusicKey] && currentMusicKey !== key){
       try { audioCache[currentMusicKey].pause(); } catch(e){}
       try { audioCache[currentMusicKey].currentTime = 0; } catch(e){}
@@ -1215,6 +1221,20 @@ function stopPowerOutMusic(){ return; }
     currentMusicKey = null;
   }
 
+  function pauseMusic(){
+    if (currentMusicKey && audioCache[currentMusicKey]){
+      try { audioCache[currentMusicKey].pause(); } catch(e){}
+    }
+  }
+
+  function resumeMusic(){
+    if (currentMusicKey && audioCache[currentMusicKey]){
+      const a = audioCache[currentMusicKey];
+      a.volume = musicVol;
+      tryPlayCached(a);
+    }
+  }
+
   function playOneShot(key){
     const a = new Audio(MP3[key]);
     a.preload = 'auto';
@@ -1223,49 +1243,40 @@ function stopPowerOutMusic(){ return; }
     tryPlayCached(a);
   }
 
-  // --- Экспорт функций на window, чтобы заменить заглушки в игре ---
-
-  // Меню
+  // Экспорт игровых функций
   window.startMenuDrone = function(){
+    musicSuppressed = false;
     playMusic('menu');
   };
   window.stopMenuDrone = function(){
     if (currentMusicKey === 'menu') stopMusic();
   };
 
-  // Фоновая музыка ночи
   window.startGameMusic = function(forceIntense){
-    // В 5-й ночи — night_5, иначе nights_1_4
-    // Флаг isCustomNight / night / partyMode живут в глобальной области
-    // Поэтому пробуем достать безопасно:
+    musicSuppressed = false;
     let useNight5 = false;
     try {
-      // Проверяем через window (в игре объявлены через let, но работают глобально)
       if (typeof window.isCustomNight !== 'undefined' && window.isCustomNight) useNight5 = false;
       else if (typeof window.night !== 'undefined' && window.night >= 5) useNight5 = true;
       else useNight5 = false;
     } catch(e){}
     playMusic(useNight5 ? 'night_5' : 'nights_1_4');
   };
-  window.setMusicTension = function(v){ /* не используется */ };
+  window.setMusicTension = function(v){};
   window.stopGameMusic = function(){
     stopMusic();
   };
 
-  // Старая МайУмшка / power out / прочее — не используем отдельные mp3,
-  // просто ничего не делаем, чтобы не конфликтовать
   window.startOldMayumshkaMusic = function(){};
   window.stopOldMayumshkaMusic = function(){};
   window.startPowerOutMusic = function(){};
   window.stopPowerOutMusic = function(){};
 
-  // Скример — отдельная дорожка jumpscare
   window.playJumpscareSound = function(){
     playOneShot('jumpscare');
   };
 
-  // --- Автоподхват громкости musicVol ---
-  // Обновляем громкость при изменении в настройках
+  // Обновление громкости
   const origUpdateVol = window.updateVolumesFromSettings;
   window.updateVolumesFromSettings = function(){
     if (typeof origUpdateVol === 'function') origUpdateVol();
@@ -1274,7 +1285,6 @@ function stopPowerOutMusic(){ return; }
     });
   };
 
-  // --- Также перехватываем изменения ползунка громкости музыки ---
   document.addEventListener('DOMContentLoaded', () => {
     const volMusic = document.getElementById('volMusic');
     if (volMusic){
@@ -1287,9 +1297,7 @@ function stopPowerOutMusic(){ return; }
     }
   });
 
-  // --- Хук на скример — когда вызывается triggerJumpscare, играем jumpscare.mp3 ---
-  // Обёртка: находим оригинальную функцию и вызываем её + свой звук
-  // Но triggerJumpscare объявлена внутри основного скрипта — оборачиваем через setTimeout
+  // Хук на скример — играем jumpscare.mp3
   function hookJumpscare(){
     if (typeof window.triggerJumpscare === 'function' && !window.triggerJumpscare.__hooked){
       const orig = window.triggerJumpscare;
@@ -1300,17 +1308,17 @@ function stopPowerOutMusic(){ return; }
       window.triggerJumpscare.__hooked = true;
     }
   }
-  // Пробуем захукать сразу и через небольшие задержки — потому что функция могла ещё не быть готова
   hookJumpscare();
   setTimeout(hookJumpscare, 100);
   setTimeout(hookJumpscare, 500);
   setTimeout(hookJumpscare, 1500);
 
-  // --- При возврате в меню — возвращаем меню-музыку ---
+  // Хук на goToMenu — возвращаем меню-музыку
   function hookGoToMenu(){
     if (typeof window.goToMenu === 'function' && !window.goToMenu.__hooked){
       const orig = window.goToMenu;
       window.goToMenu = function(){
+        musicSuppressed = false;
         try { stopGameMusic(); startMenuDrone(); } catch(e){}
         return orig.apply(this, arguments);
       };
@@ -1321,17 +1329,15 @@ function stopPowerOutMusic(){ return; }
   setTimeout(hookGoToMenu, 100);
   setTimeout(hookGoToMenu, 500);
 
-  // --- Хук на старт игры — включаем фоновую музыку при старте ночи ---
+  // Хук на startGame — фон ночи
   function hookStartGame(){
     if (typeof window.startGame === 'function' && !window.startGame.__hooked){
       const orig = window.startGame;
       window.startGame = function(custom){
-        // Сначала запускаем оригинал
+        musicSuppressed = false;
         const res = orig.apply(this, arguments);
-        // Затем включаем музыку ночи
         setTimeout(() => {
           try {
-            // Определяем ночь
             let useNight5 = false;
             try {
               if (typeof window.isCustomNight !== 'undefined' && window.isCustomNight) useNight5 = false;
@@ -1349,7 +1355,63 @@ function stopPowerOutMusic(){ return; }
   setTimeout(hookStartGame, 100);
   setTimeout(hookStartGame, 500);
 
-  // --- При старте из boot в меню — запускаем меню-музыку ---
+  // Хук на openExtra — останавливаем музыку
+  function hookOpenExtra(){
+    if (typeof window.openExtra === 'function' && !window.openExtra.__hooked){
+      const orig = window.openExtra;
+      window.openExtra = function(){
+        musicSuppressed = true;
+        pauseMusic();
+        return orig.apply(this, arguments);
+      };
+      window.openExtra.__hooked = true;
+    }
+  }
+  hookOpenExtra();
+  setTimeout(hookOpenExtra, 100);
+  setTimeout(hookOpenExtra, 500);
+  setTimeout(hookOpenExtra, 1500);
+
+  // Хук на closeExtra — возвращаем музыку меню
+  function hookCloseExtra(){
+    if (typeof window.closeExtra === 'function' && !window.closeExtra.__hooked){
+      const orig = window.closeExtra;
+      window.closeExtra = function(){
+        const res = orig.apply(this, arguments);
+        musicSuppressed = false;
+        // Возвращаем музыку меню (мы в меню после выхода из ЭКСТРА)
+        setTimeout(() => { try { playMusic('menu'); } catch(e){} }, 50);
+        return res;
+      };
+      window.closeExtra.__hooked = true;
+    }
+  }
+  hookCloseExtra();
+  setTimeout(hookCloseExtra, 100);
+  setTimeout(hookCloseExtra, 500);
+  setTimeout(hookCloseExtra, 1500);
+
+  // ==== СКРИМЕРЫ В ЭКСТРА (кнопки .sbtn2) ====
+  // Эти кнопки вызывают showScare2D + анимацию. Нужно добавить звук jumpscare.mp3
+  function attachExtraScareSound(){
+    const btns = document.querySelectorAll('.sbtn2');
+    btns.forEach(b => {
+      if (b.__soundHooked) return;
+      b.__soundHooked = true;
+      b.addEventListener('click', () => {
+        try { playOneShot('jumpscare'); } catch(e){}
+      });
+      b.addEventListener('touchstart', () => {
+        try { playOneShot('jumpscare'); } catch(e){}
+      }, { passive: true });
+    });
+  }
+  attachExtraScareSound();
+  setTimeout(attachExtraScareSound, 200);
+  setTimeout(attachExtraScareSound, 800);
+  setTimeout(attachExtraScareSound, 2000);
+
+  // Хук на boot → меню (запуск музыки меню)
   function hookBootToMenu(){
     const boot = document.getElementById('boot');
     if (boot && !boot.__musicHooked){
